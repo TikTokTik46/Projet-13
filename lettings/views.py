@@ -1,15 +1,11 @@
 from django.shortcuts import render
 from .models import Letting
 
-# Main index
-def index(request):
-    return render(request, 'index.html')
-
 # Lettings index
-def lettings_index(request):
+def index(request):
     lettings_list = Letting.objects.all()
     context = {'lettings_list': lettings_list}
-    return render(request, 'lettings_index.html', context)
+    return render(request, 'index.html', context)
 
 
 # Letting

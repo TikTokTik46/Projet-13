@@ -3,10 +3,10 @@ from .models import Profile
 
 
 # Profiles index
-def profiles_index(request):
+def index(request):
     profiles_list = Profile.objects.all()
     context = {'profiles_list': profiles_list}
-    return render(request, 'profiles_index.html', context)
+    return render(request, 'index.html', context)
 
 # Profile view
 def profile(request, username):
