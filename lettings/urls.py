@@ -1,5 +1,7 @@
+"""
+Configuration des URL pour l'application "lettings".
+"""
 from django.urls import path
-
 import lettings.views
 
 app_name = 'lettings'

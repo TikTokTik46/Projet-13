@@ -1,3 +1,12 @@
+"""
+Fichier de configuration principal du projet Django.
+
+Ce fichier contient les paramètres de configuration globaux de l'application,
+tels que les réglages de base de données, les paramètres de sécurité, les clés secrètes,
+les applications installées et bien plus encore. Il permet de personnaliser le comportement
+global du site web.
+"""
+
 import os
 
 from pathlib import Path
@@ -113,4 +122,4 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / "static",]
+STATICFILES_DIRS = [BASE_DIR / "static", ]

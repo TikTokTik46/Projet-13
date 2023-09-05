@@ -1,5 +1,7 @@
+"""
+Configuration des URL pour l'application "profiles".
+"""
 from django.urls import path
-
 import profiles.views
 
 app_name = 'profiles'

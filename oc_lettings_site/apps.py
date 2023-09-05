@@ -1,3 +1,6 @@
+"""
+Configuration de l'application "oc_lettings_site".
+"""
 from django.apps import AppConfig
 
 

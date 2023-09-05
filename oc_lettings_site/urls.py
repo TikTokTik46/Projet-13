@@ -1,3 +1,6 @@
+"""
+Configuration des URL principales du projet, incluant les applications "lettings" et "profiles".
+"""
 from django.contrib import admin
 from django.urls import path, include
 
