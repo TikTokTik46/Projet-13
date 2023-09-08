@@ -1,0 +1,5 @@
+[run]
+omit =
+    oc_lettings_site/tests/*
+    lettings/tests/*
+    profiles/tests/*

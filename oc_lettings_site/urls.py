@@ -12,8 +12,6 @@ urlpatterns = [
     path('lettings/', include('lettings.urls', namespace='lettings')),
     path('profiles/', include('profiles.urls', namespace='profiles')),
     path('admin/', admin.site.urls),
-    # Test de la page 404
-    path('404/', oc_lettings_site.views.error_404_view_handler),
 ]
 
 handler404 = 'oc_lettings_site.views.error_404_view_handler'
