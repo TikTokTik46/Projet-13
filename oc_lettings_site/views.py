@@ -3,6 +3,7 @@ Ce fichier contient la vue pour afficher la page d'accueil du site.
 """
 from django.shortcuts import render
 from django.utils.translation import gettext_lazy as _
+from sentry_sdk import capture_message
 
 def index(request):
     """
@@ -39,24 +40,24 @@ VIEW_ERRORS = {
                        "mystère des demandes incorrectes."), }, }
 
 def error_view_handler(request, exception, status):
-    """Gère les erreurs HTTP en affichant une page d'erreur personnalisée."""
+    """Gère les erreurs HTTP en affichant une page d'erreur personnalisée
+    et envoie l'erreur à Sentry.."""
     return render(request, template_name='errors.html', status=status,
                   context={'error': exception, 'status': status,
                            'title': VIEW_ERRORS[status]['title'],
                            'content': VIEW_ERRORS[status]['content']})
 
+
 def error_404_view_handler(request, exception=None):
-    """Gère les erreurs 404 en utilisant la fonction error_view_handler."""
+    """
+    Gère les erreurs 404 en utilisant la fonction error_view_handler.
+    """
+    capture_message("Page not found: %s" % request.path, level="error")
     return error_view_handler(request, exception, 404)
 
 def error_500_view_handler(request, exception=None):
-    """Gère les erreurs 500 en utilisant la fonction error_view_handler."""
+    """
+    Gère les erreurs 500 en utilisant la fonction error_view_handler.
+    """
+    capture_message("Internal server error: %s" % request.path, level="error")
     return error_view_handler(request, exception, 500)
-
-def error_403_view_handler(request, exception=None):
-    """Gère les erreurs 403 en utilisant la fonction error_view_handler."""
-    return error_view_handler(request, exception, 403)
-
-def error_400_view_handler(request, exception=None):
-    """Gère les erreurs 400 en utilisant la fonction error_view_handler."""
-    return error_view_handler(request, exception, 400)

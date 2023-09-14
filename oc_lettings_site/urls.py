@@ -5,6 +5,7 @@ Configuration des URL principales du projet, incluant les applications
 from django.contrib import admin
 from django.urls import path, include
 
+
 import oc_lettings_site.views
 
 urlpatterns = [
@@ -16,5 +17,3 @@ urlpatterns = [
 
 handler404 = 'oc_lettings_site.views.error_404_view_handler'
 handler500 = 'oc_lettings_site.views.error_500_view_handler'
-handler403 = 'oc_lettings_site.views.error_403_view_handler'
-handler400 = 'oc_lettings_site.views.error_400_view_handler'

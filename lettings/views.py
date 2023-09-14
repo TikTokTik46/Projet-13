@@ -3,6 +3,7 @@ Ce fichier contient les vues pour afficher la liste des locations et les détail
 """
 from django.shortcuts import render
 from .models import Letting
+import sentry_sdk
 
 
 def index(request):
@@ -40,4 +41,6 @@ def letting(request, letting_id):
         'title': letting.title,
         'address': letting.address,
     }
+    message = f"Someone acced to the letting '{letting.title}'"
+    sentry_sdk.capture_message(message, level="info")
     return render(request, 'lettings/letting.html', context)

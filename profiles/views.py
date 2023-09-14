@@ -3,6 +3,7 @@ Ce fichier contient les vues pour afficher la liste des profils et les détails 
 """
 from django.shortcuts import render
 from .models import Profile
+import sentry_sdk
 
 
 def index(request):
@@ -36,6 +37,6 @@ def profile(request, username):
 
     profile = Profile.objects.get(user__username=username)
     context = {'profile': profile}
-    print(username)
-    print(profile)
+    message = f"Someone acced to the profil '{username}'"
+    sentry_sdk.capture_message(message, level="info")
     return render(request, 'profiles/profile.html', context)
