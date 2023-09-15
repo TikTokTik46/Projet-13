@@ -29,15 +29,7 @@ VIEW_ERRORS = {
     500: {'title': _("Internal error"),
           'content': _("Le serveur a peut-être eu un fou rire, mais il essaie "
                        "de se ressaisir. Revenez plus tard, nous espérons "
-                       "qu'il aura retrouvé son sérieux d'ici là."), },
-    403: {'title': _("Permission denied"),
-          'content': _("Désolé, vous n'avez pas la clé secrète pour cette "
-                       "partie du site. C'est comme essayer d'accéder à la "
-                       "salle des trésors sans être un pirate. "
-                       "Retournez sur la bonne voie."), },
-    400: {'title': _("Bad request"),
-          'content': _("Il semble que votre demande soit tombée dans le "
-                       "mystère des demandes incorrectes."), }, }
+                       "qu'il aura retrouvé son sérieux d'ici là."), }}
 
 def error_view_handler(request, exception, status):
     """Gère les erreurs HTTP en affichant une page d'erreur personnalisée

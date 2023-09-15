@@ -2,6 +2,7 @@
 Ce fichier contient les vues pour afficher la liste des locations et les détails d'une location.
 """
 from django.shortcuts import render
+from django.http import Http404
 from .models import Letting
 import sentry_sdk
 

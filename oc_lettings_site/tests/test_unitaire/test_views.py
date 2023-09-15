@@ -5,7 +5,6 @@ import pytest
 from django.urls import reverse
 from django.test import Client
 from django.http import HttpResponse, HttpResponseNotFound
-import sentry_sdk
 
 @pytest.mark.django_db
 def test_index_view():
