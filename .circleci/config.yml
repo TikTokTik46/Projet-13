@@ -11,6 +11,9 @@ jobs:
       - python/install-packages:
           pkg-manager: pip
       - run:
+          name: Set environment variables
+          command: echo "SECRET_KEY=$SECRET_KEY" >> $BASH_ENV
+      - run:
           name: Run tests
           command: python -m pytest
       - persist_to_workspace:
