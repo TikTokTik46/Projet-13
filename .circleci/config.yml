@@ -1,7 +1,6 @@
 version: 2.1
 orbs:
   python: circleci/python@2.0.3
-  heroku: circleci/heroku@1.2.6
 
 jobs:
   build_and_test: # Construction et execution des tests pour validation
@@ -37,13 +36,13 @@ jobs:
             echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
             docker push qmolieres/oc-lettings:latest 
 
-  deploy: # this can be any name you choose
+  deploy:
     executor: python/default
     steps:
       - attach_workspace:
           at: ~/project
       - heroku/deploy-via-git:
-          force: true # force push when pushing to the heroku remote, see: https://devcenter.heroku.com/articles/git
+          force: true
 
 workflows:
   test_my_app:
@@ -52,8 +51,8 @@ workflows:
       - build_docker_image
       - deploy:
           requires:
-            - build_and_test # only deploy if the build_and_test job has completed
+            - build_and_test # deploiment seulement si build_and_test est passé
           filters:
             branches:
-              only: main # only deploy when on main
+              only: main
 
