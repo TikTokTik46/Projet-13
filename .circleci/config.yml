@@ -49,10 +49,10 @@ workflows:
     jobs:
       - build_and_test
       - build_docker_image
-      - deploy:
-          requires:
-            - build_and_test # deploiment seulement si build_and_test est passé
-          filters:
-            branches:
-              only: main
+#      - deploy:
+#          requires:
+#            - build_and_test # deploiment seulement si build_and_test est passé
+#          filters:
+#            branches:
+#              only: main
 
