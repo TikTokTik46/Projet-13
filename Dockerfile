@@ -4,6 +4,10 @@ FROM python:3.12-rc-slim
 # Configurez l'environnement
 ENV PYTHONUNBUFFERED 1
 
+# collectstatic needs the secret key to be set. We store that in this environment variable.
+# Set this value in this project's .env file
+ARG SECRET_KEY
+
 # Définissez le répertoire de travail
 WORKDIR /app
 
