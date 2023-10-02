@@ -4,8 +4,6 @@ FROM python:3.12-rc-slim
 # Configurez l'environnement
 ENV PYTHONUNBUFFERED 1
 
-ARG SECRET_KEY
-
 # Définissez le répertoire de travail
 WORKDIR /app
 
