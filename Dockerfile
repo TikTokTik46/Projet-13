@@ -1,5 +1,5 @@
 # Utilisez une image de base avec Python
-FROM python:3.8-slim
+FROM python:3.12-rc-slim
 
 # Configurez l'environnement
 ENV PYTHONUNBUFFERED 1
@@ -15,6 +15,9 @@ RUN pip install -r requirements.txt
 
 # Copiez le reste de l'application dans le conteneur
 COPY . /app/
+
+# Exécutez la commande collectstatic pour collecter les fichiers statiques
+RUN python manage.py collectstatic --noinput
 
 # Exposez le port sur lequel votre application fonctionne (par défaut : 8000)
 EXPOSE 8000

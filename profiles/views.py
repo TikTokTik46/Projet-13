@@ -35,8 +35,11 @@ def profile(request, username):
         HttpResponse: Une réponse HTTP contenant les détails du profil affiché sur la page dédiée.
     """
 
-    profile = Profile.objects.get(user__username=username)
-    context = {'profile': profile}
-    message = f"Someone acced to the profil '{username}'"
-    sentry_sdk.capture_message(message, level="info")
-    return render(request, 'profiles/profile.html', context)
+    try:
+        profile = Profile.objects.get(user__username=username)
+        context = {'profile': profile}
+        message = f"Someone acced to the profil '{username}'"
+        sentry_sdk.capture_message(message, level="info")
+        return render(request, 'profiles/profile.html', context)
+    except Profile.DoesNotExist:
+        sentry_sdk.capture_message(f"The profile '{username}' does not exist in the database", level="info")

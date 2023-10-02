@@ -2,7 +2,6 @@
 Ce fichier contient les vues pour afficher la liste des locations et les détails d'une location.
 """
 from django.shortcuts import render
-from django.http import Http404
 from .models import Letting
 import sentry_sdk
 
@@ -36,12 +35,14 @@ def letting(request, letting_id):
         HttpResponse: Une réponse HTTP contenant les détails de la location
         affichée sur la page dédiée.
     """
-
-    letting = Letting.objects.get(id=letting_id)
-    context = {
-        'title': letting.title,
-        'address': letting.address,
-    }
-    message = f"Someone acced to the letting '{letting.title}'"
-    sentry_sdk.capture_message(message, level="info")
-    return render(request, 'lettings/letting.html', context)
+    try:
+        letting = Letting.objects.get(id=letting_id)
+        context = {
+            'title': letting.title,
+            'address': letting.address,
+        }
+        message = f"Someone acced to the letting '{letting.title}'"
+        sentry_sdk.capture_message(message, level="info")
+        return render(request, 'lettings/letting.html', context)
+    except Letting.DoesNotExist:
+        sentry_sdk.capture_message(f"The ID '{letting_id}' does not exist in the database", level="info")
