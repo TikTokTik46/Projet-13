@@ -1,8 +1,6 @@
 # Utilisez une image de base avec Python
 FROM python:3.12-rc-slim
 
-FROM --platform=linux/amd64 <python:3.12-rc-slim>
-
 # Configurez l'environnement
 ENV PYTHONUNBUFFERED 1
 
