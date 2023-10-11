@@ -6,6 +6,5 @@ venv/
 **/*.mo
 .gitignore
 .git/
-staticfiles/
 Dockerfile
 **/*.md
