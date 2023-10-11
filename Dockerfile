@@ -21,7 +21,7 @@ RUN pip install -r requirements.txt
 COPY . /app/
 
 # Exécutez la commande collectstatic pour collecter les fichiers statiques
-RUN python manage.py collectstatic --noinput
+#RUN python manage.py collectstatic --noinput
 
 # Exposez le port sur lequel votre application fonctionne (par défaut : 8000)
 EXPOSE 8000
