@@ -11,7 +11,7 @@ from django.test import Client
 class TestProfileViews:
     def setup_method(self):
         """
-        Initialisation des données pour les tests.
+        Initialisation des donnés pour les tests.
         """
         self.client = Client()
         self.address = Address.objects.create(
@@ -27,9 +27,8 @@ class TestProfileViews:
 
     def test_index_view(self):
         """
-        Teste la vue de la liste des locations.
-        Vérifie que la réponse HTTP a le code 200 et que le titre du letting
-        est présent dans le contenu de la réponse.
+        Teste la vue de la liste des locations. Vérifie que la réponse HTTP a
+        le code 200 et que le titre du letting est présent dans le contenu de la réponse.
         """
         response: HttpResponse = self.client.get(
             reverse('lettings:lettings_index'))
@@ -38,9 +37,8 @@ class TestProfileViews:
 
     def test_letting_view(self):
         """
-        Teste la vue de détail d'une location.
-        Vérifie que la réponse HTTP a le code 200 et que le titre et l'adresse
-         du letting sont présents dans le contenu de la réponse.
+        Teste la vue d'une location. Vérifie que la réponse HTTP a le code 200
+        et que le titre du letting est présent dans le contenu de la réponse.
         """
         response: HttpResponse = self.client.get(
             reverse('lettings:letting', args=[self.letting.pk]))
