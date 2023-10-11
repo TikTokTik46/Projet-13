@@ -13,11 +13,8 @@ jobs:
           name: Set environment variables
           command: echo "SECRET_KEY=$SECRET_KEY" >> $BASH_ENV
       - run:
-          name: Set DJANGO_SETTINGS_MODULE
-          command: echo "DJANGO_SETTINGS_MODULE=oc_lettings_site.settings" >> $BASH_ENV  # Remplacez par le nom de votre module
-      - run:
           name: Run tests
-          command: python -m pytest
+          command: python -m pytest --settings=oc_lettings_site.settings
       - persist_to_workspace:
           root: ~/project
           paths:
@@ -44,4 +41,3 @@ workflows:
     jobs:
       - build_and_test
       - build_docker_image
-
