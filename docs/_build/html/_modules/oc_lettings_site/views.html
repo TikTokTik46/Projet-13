@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 
-<html lang="FR" data-content_root="../../">
+<html lang="FR">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>oc_lettings_site.views &#8212; Documentation OC-Lettings 03/10/2023</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=4f649999" />
     <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=039e1c02" />
-    <script src="../../_static/documentation_options.js?v=5a3fdb57"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=cf57853c"></script>
     <script src="../../_static/doctools.js?v=888ff710"></script>
-    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
     <script src="../../_static/translations.js?v=d99ca74e"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Recherche" href="../../search.html" />
@@ -37,9 +37,7 @@
 <span class="kn">from</span> <span class="nn">django.utils.translation</span> <span class="kn">import</span> <span class="n">gettext_lazy</span> <span class="k">as</span> <span class="n">_</span>
 <span class="kn">from</span> <span class="nn">sentry_sdk</span> <span class="kn">import</span> <span class="n">capture_message</span>
 
-<div class="viewcode-block" id="index">
-<a class="viewcode-back" href="../../oc_lettings_site/oc_lettings_site.html#oc_lettings_site.views.index">[docs]</a>
-<span class="k">def</span> <span class="nf">index</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+<div class="viewcode-block" id="index"><a class="viewcode-back" href="../../oc_lettings_site/oc_lettings_site.html#oc_lettings_site.views.index">[docs]</a><span class="k">def</span> <span class="nf">index</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Affiche la page d&#39;accueil avec des liens vers les sections &quot;Lettings&quot; et &quot;Profiles&quot;.</span>
 
@@ -51,7 +49,6 @@
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;index.html&#39;</span><span class="p">)</span></div>
-
 
 
 <span class="n">VIEW_ERRORS</span> <span class="o">=</span> <span class="p">{</span>
@@ -66,9 +63,7 @@
                        <span class="s2">&quot;de se ressaisir. Revenez plus tard, nous espérons &quot;</span>
                        <span class="s2">&quot;qu&#39;il aura retrouvé son sérieux d&#39;ici là.&quot;</span><span class="p">),</span> <span class="p">}}</span>
 
-<div class="viewcode-block" id="error_view_handler">
-<a class="viewcode-back" href="../../oc_lettings_site/oc_lettings_site.html#oc_lettings_site.views.error_view_handler">[docs]</a>
-<span class="k">def</span> <span class="nf">error_view_handler</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">exception</span><span class="p">,</span> <span class="n">status</span><span class="p">):</span>
+<div class="viewcode-block" id="error_view_handler"><a class="viewcode-back" href="../../oc_lettings_site/oc_lettings_site.html#oc_lettings_site.views.error_view_handler">[docs]</a><span class="k">def</span> <span class="nf">error_view_handler</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">exception</span><span class="p">,</span> <span class="n">status</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Gère les erreurs HTTP en affichant une page d&#39;erreur personnalisée</span>
 <span class="sd">    et envoie l&#39;erreur à Sentry..&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">template_name</span><span class="o">=</span><span class="s1">&#39;errors.html&#39;</span><span class="p">,</span> <span class="n">status</span><span class="o">=</span><span class="n">status</span><span class="p">,</span>
@@ -77,26 +72,19 @@
                            <span class="s1">&#39;content&#39;</span><span class="p">:</span> <span class="n">VIEW_ERRORS</span><span class="p">[</span><span class="n">status</span><span class="p">][</span><span class="s1">&#39;content&#39;</span><span class="p">]})</span></div>
 
 
-
-<div class="viewcode-block" id="error_404_view_handler">
-<a class="viewcode-back" href="../../oc_lettings_site/oc_lettings_site.html#oc_lettings_site.views.error_404_view_handler">[docs]</a>
-<span class="k">def</span> <span class="nf">error_404_view_handler</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">exception</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="error_404_view_handler"><a class="viewcode-back" href="../../oc_lettings_site/oc_lettings_site.html#oc_lettings_site.views.error_404_view_handler">[docs]</a><span class="k">def</span> <span class="nf">error_404_view_handler</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">exception</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Gère les erreurs 404 en utilisant la fonction error_view_handler.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">capture_message</span><span class="p">(</span><span class="s2">&quot;Page not found: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">request</span><span class="o">.</span><span class="n">path</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="s2">&quot;error&quot;</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">error_view_handler</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">exception</span><span class="p">,</span> <span class="mi">404</span><span class="p">)</span></div>
 
-
-<div class="viewcode-block" id="error_500_view_handler">
-<a class="viewcode-back" href="../../oc_lettings_site/oc_lettings_site.html#oc_lettings_site.views.error_500_view_handler">[docs]</a>
-<span class="k">def</span> <span class="nf">error_500_view_handler</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">exception</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="error_500_view_handler"><a class="viewcode-back" href="../../oc_lettings_site/oc_lettings_site.html#oc_lettings_site.views.error_500_view_handler">[docs]</a><span class="k">def</span> <span class="nf">error_500_view_handler</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">exception</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Gère les erreurs 500 en utilisant la fonction error_view_handler.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">capture_message</span><span class="p">(</span><span class="s2">&quot;Internal server error: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">request</span><span class="o">.</span><span class="n">path</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="s2">&quot;error&quot;</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">error_view_handler</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">exception</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span></div>
-
 </pre></div>
 
           </div>
@@ -115,10 +103,6 @@
 
 
 <h3>Navigation</h3>
-<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../modules.html">Python-OC-Lettings-FR</a></li>
-</ul>
 
 <div class="relations">
 <h3>Related Topics</h3>
@@ -155,7 +139,7 @@
       &copy;2023, Quentin Molières.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.2.6</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.1.2</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
       
     </div>

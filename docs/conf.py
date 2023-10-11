@@ -10,7 +10,16 @@
 # Path to the Python source files
 import os
 import sys
-sys.path.insert(0, os.path.abspath('../'))
+import django
+
+# Chemin vers le répertoire racine du projet Django
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_DIR = os.path.join(BASE_DIR, '..')
+sys.path.insert(0, PROJECT_DIR)
+
+# Configurez le module à utiliser pour Django
+os.environ['DJANGO_SETTINGS_MODULE'] = 'oc_lettings_site.settings'
+django.setup()
 
 project = 'OC-Lettings'
 copyright = '2023, Quentin Molières'

@@ -14,6 +14,8 @@
     <script src="../_static/translations.js?v=d99ca74e"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="profiles package" href="../profiles/profiles.html" />
+    <link rel="prev" title="lettings.tests.test_integration package" href="lettings.tests.test_integration.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   
@@ -35,14 +37,128 @@
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
 </section>
-<section id="lettings-tests-test-unitaire-test-models-module">
-<h2>lettings.tests.test_unitaire.test_models module<a class="headerlink" href="#lettings-tests-test-unitaire-test-models-module" title="Link to this heading">¶</a></h2>
+<section id="module-lettings.tests.test_unitaire.test_models">
+<span id="lettings-tests-test-unitaire-test-models-module"></span><h2>lettings.tests.test_unitaire.test_models module<a class="headerlink" href="#module-lettings.tests.test_unitaire.test_models" title="Link to this heading">¶</a></h2>
+<p>Testes des modèles de l’application lettings</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="lettings.tests.test_unitaire.test_models.TestAddressModel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lettings.tests.test_unitaire.test_models.</span></span><span class="sig-name descname"><span class="pre">TestAddressModel</span></span><a class="reference internal" href="../_modules/lettings/tests/test_unitaire/test_models.html#TestAddressModel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lettings.tests.test_unitaire.test_models.TestAddressModel" title="Link to this definition">¶</a></dt>
+<dd><p>Bases : <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="lettings.tests.test_unitaire.test_models.TestAddressModel.test_address_creation">
+<span class="sig-name descname"><span class="pre">test_address_creation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/lettings/tests/test_unitaire/test_models.html#TestAddressModel.test_address_creation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lettings.tests.test_unitaire.test_models.TestAddressModel.test_address_creation" title="Link to this definition">¶</a></dt>
+<dd><p>Teste la création d’une instance de modèle Address valide.
+Vérifie que l’instance est créée avec succès et que sa représentation
+en chaîne de caractères est correcte.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lettings.tests.test_unitaire.test_models.TestAddressModel.test_invalid_state_code">
+<span class="sig-name descname"><span class="pre">test_invalid_state_code</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/lettings/tests/test_unitaire/test_models.html#TestAddressModel.test_invalid_state_code"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lettings.tests.test_unitaire.test_models.TestAddressModel.test_invalid_state_code" title="Link to this definition">¶</a></dt>
+<dd><p>Teste la validation du code d’État dans le modèle Address.
+Vérifie qu’une exception ValidationError est levée lorsque le code
+d’État est invalide.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lettings.tests.test_unitaire.test_models.TestAddressModel.pytestmark">
+<span class="sig-name descname"><span class="pre">pytestmark</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[Mark(name='django_db',</span> <span class="pre">args=(),</span> <span class="pre">kwargs={})]</span></em><a class="headerlink" href="#lettings.tests.test_unitaire.test_models.TestAddressModel.pytestmark" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="lettings.tests.test_unitaire.test_models.TestLettingModel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lettings.tests.test_unitaire.test_models.</span></span><span class="sig-name descname"><span class="pre">TestLettingModel</span></span><a class="reference internal" href="../_modules/lettings/tests/test_unitaire/test_models.html#TestLettingModel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lettings.tests.test_unitaire.test_models.TestLettingModel" title="Link to this definition">¶</a></dt>
+<dd><p>Bases : <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Teste la création d’une instance de modèle Letting valide.
+Vérifie que l’instance est créée avec succès et que sa représentation
+en chaîne de caractères est correcte.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="lettings.tests.test_unitaire.test_models.TestLettingModel.test_letting_creation">
+<span class="sig-name descname"><span class="pre">test_letting_creation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/lettings/tests/test_unitaire/test_models.html#TestLettingModel.test_letting_creation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lettings.tests.test_unitaire.test_models.TestLettingModel.test_letting_creation" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lettings.tests.test_unitaire.test_models.TestLettingModel.pytestmark">
+<span class="sig-name descname"><span class="pre">pytestmark</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[Mark(name='django_db',</span> <span class="pre">args=(),</span> <span class="pre">kwargs={})]</span></em><a class="headerlink" href="#lettings.tests.test_unitaire.test_models.TestLettingModel.pytestmark" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="lettings-tests-test-unitaire-test-urls-module">
-<h2>lettings.tests.test_unitaire.test_urls module<a class="headerlink" href="#lettings-tests-test-unitaire-test-urls-module" title="Link to this heading">¶</a></h2>
+<section id="module-lettings.tests.test_unitaire.test_urls">
+<span id="lettings-tests-test-unitaire-test-urls-module"></span><h2>lettings.tests.test_unitaire.test_urls module<a class="headerlink" href="#module-lettings.tests.test_unitaire.test_urls" title="Link to this heading">¶</a></h2>
+<p>Testes des urls de l’application lettings</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="lettings.tests.test_unitaire.test_urls.TestLettingsUrls">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lettings.tests.test_unitaire.test_urls.</span></span><span class="sig-name descname"><span class="pre">TestLettingsUrls</span></span><a class="reference internal" href="../_modules/lettings/tests/test_unitaire/test_urls.html#TestLettingsUrls"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lettings.tests.test_unitaire.test_urls.TestLettingsUrls" title="Link to this definition">¶</a></dt>
+<dd><p>Bases : <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="lettings.tests.test_unitaire.test_urls.TestLettingsUrls.setup_method">
+<span class="sig-name descname"><span class="pre">setup_method</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/lettings/tests/test_unitaire/test_urls.html#TestLettingsUrls.setup_method"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lettings.tests.test_unitaire.test_urls.TestLettingsUrls.setup_method" title="Link to this definition">¶</a></dt>
+<dd><p>Initialisation des données pour les tests.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lettings.tests.test_unitaire.test_urls.TestLettingsUrls.test_lettings_index_url">
+<span class="sig-name descname"><span class="pre">test_lettings_index_url</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/lettings/tests/test_unitaire/test_urls.html#TestLettingsUrls.test_lettings_index_url"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lettings.tests.test_unitaire.test_urls.TestLettingsUrls.test_lettings_index_url" title="Link to this definition">¶</a></dt>
+<dd><p>Teste la résolution et la création de l’URL pour la vue
+“lettings_index”.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lettings.tests.test_unitaire.test_urls.TestLettingsUrls.test_letting_url">
+<span class="sig-name descname"><span class="pre">test_letting_url</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/lettings/tests/test_unitaire/test_urls.html#TestLettingsUrls.test_letting_url"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lettings.tests.test_unitaire.test_urls.TestLettingsUrls.test_letting_url" title="Link to this definition">¶</a></dt>
+<dd><p>Teste la résolution et la création de l’URL pour la vue “letting”.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lettings.tests.test_unitaire.test_urls.TestLettingsUrls.pytestmark">
+<span class="sig-name descname"><span class="pre">pytestmark</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[Mark(name='django_db',</span> <span class="pre">args=(),</span> <span class="pre">kwargs={})]</span></em><a class="headerlink" href="#lettings.tests.test_unitaire.test_urls.TestLettingsUrls.pytestmark" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="lettings-tests-test-unitaire-test-views-module">
-<h2>lettings.tests.test_unitaire.test_views module<a class="headerlink" href="#lettings-tests-test-unitaire-test-views-module" title="Link to this heading">¶</a></h2>
+<section id="module-lettings.tests.test_unitaire.test_views">
+<span id="lettings-tests-test-unitaire-test-views-module"></span><h2>lettings.tests.test_unitaire.test_views module<a class="headerlink" href="#module-lettings.tests.test_unitaire.test_views" title="Link to this heading">¶</a></h2>
+<p>Testes des vues de l’application lettings</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="lettings.tests.test_unitaire.test_views.TestProfileViews">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lettings.tests.test_unitaire.test_views.</span></span><span class="sig-name descname"><span class="pre">TestProfileViews</span></span><a class="reference internal" href="../_modules/lettings/tests/test_unitaire/test_views.html#TestProfileViews"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lettings.tests.test_unitaire.test_views.TestProfileViews" title="Link to this definition">¶</a></dt>
+<dd><p>Bases : <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="lettings.tests.test_unitaire.test_views.TestProfileViews.setup_method">
+<span class="sig-name descname"><span class="pre">setup_method</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/lettings/tests/test_unitaire/test_views.html#TestProfileViews.setup_method"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lettings.tests.test_unitaire.test_views.TestProfileViews.setup_method" title="Link to this definition">¶</a></dt>
+<dd><p>Initialisation des données pour les tests.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lettings.tests.test_unitaire.test_views.TestProfileViews.test_index_view">
+<span class="sig-name descname"><span class="pre">test_index_view</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/lettings/tests/test_unitaire/test_views.html#TestProfileViews.test_index_view"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lettings.tests.test_unitaire.test_views.TestProfileViews.test_index_view" title="Link to this definition">¶</a></dt>
+<dd><p>Teste la vue de la liste des locations.
+Vérifie que la réponse HTTP a le code 200 et que le titre du letting
+est présent dans le contenu de la réponse.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lettings.tests.test_unitaire.test_views.TestProfileViews.test_letting_view">
+<span class="sig-name descname"><span class="pre">test_letting_view</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/lettings/tests/test_unitaire/test_views.html#TestProfileViews.test_letting_view"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#lettings.tests.test_unitaire.test_views.TestProfileViews.test_letting_view" title="Link to this definition">¶</a></dt>
+<dd><p>Teste la vue de détail d’une location.
+Vérifie que la réponse HTTP a le code 200 et que le titre et l’adresse</p>
+<blockquote>
+<div><p>du letting sont présents dans le contenu de la réponse.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lettings.tests.test_unitaire.test_views.TestProfileViews.pytestmark">
+<span class="sig-name descname"><span class="pre">pytestmark</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[Mark(name='django_db',</span> <span class="pre">args=(),</span> <span class="pre">kwargs={})]</span></em><a class="headerlink" href="#lettings.tests.test_unitaire.test_views.TestProfileViews.pytestmark" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </section>
 <section id="module-lettings.tests.test_unitaire">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-lettings.tests.test_unitaire" title="Link to this heading">¶</a></h2>
@@ -67,14 +183,22 @@
 
 <h3>Navigation</h3>
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../modules.html">Python-OC-Lettings-FR</a></li>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../oc_lettings_site/oc_lettings_site.html">oc_lettings_site package</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="lettings.html">lettings package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../profiles/profiles.html">profiles package</a></li>
 </ul>
 
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="lettings.html">lettings package</a><ul>
+  <li><a href="lettings.tests.html">lettings.tests package</a><ul>
+      <li>Previous: <a href="lettings.tests.test_integration.html" title="Chapitre précédent">lettings.tests.test_integration package</a></li>
+      <li>Next: <a href="../profiles/profiles.html" title="Chapitre suivant">profiles package</a></li>
+  </ul></li>
+  </ul></li>
   </ul></li>
 </ul>
 </div>

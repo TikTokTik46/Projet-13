@@ -1,3 +1,4 @@
+# syntax = docker/dockerfile:1.2
 # Utilisez une image de base avec Python
 FROM python:3.12-rc-slim
 
