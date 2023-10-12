@@ -12,10 +12,3 @@ profiles.tests.test\_integration.test\_profile\_selection module
    :undoc-members:
    :show-inheritance:
 
-Module contents
----------------
-
-.. automodule:: profiles.tests.test_integration
-   :members:
-   :undoc-members:
-   :show-inheritance:

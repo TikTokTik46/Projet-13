@@ -10,10 +10,3 @@ Subpackages
    lettings.tests.test_integration
    lettings.tests.test_unitaire
 
-Module contents
----------------
-
-.. automodule:: lettings.tests
-   :members:
-   :undoc-members:
-   :show-inheritance:

@@ -52,10 +52,3 @@ profiles.views module
    :undoc-members:
    :show-inheritance:
 
-Module contents
----------------
-
-.. automodule:: profiles
-   :members:
-   :undoc-members:
-   :show-inheritance:

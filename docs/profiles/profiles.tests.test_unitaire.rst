@@ -28,10 +28,3 @@ profiles.tests.test\_unitaire.test\_views module
    :undoc-members:
    :show-inheritance:
 
-Module contents
----------------
-
-.. automodule:: profiles.tests.test_unitaire
-   :members:
-   :undoc-members:
-   :show-inheritance:

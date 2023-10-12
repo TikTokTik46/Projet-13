@@ -12,10 +12,3 @@ lettings.tests.test\_integration.test\_letting\_selection module
    :undoc-members:
    :show-inheritance:
 
-Module contents
----------------
-
-.. automodule:: lettings.tests.test_integration
-   :members:
-   :undoc-members:
-   :show-inheritance:

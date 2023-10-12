@@ -19,11 +19,3 @@ oc\_lettings\_site.tests.test\_unitaire.test\_views module
    :members:
    :undoc-members:
    :show-inheritance:
-
-Module contents
----------------
-
-.. automodule:: oc_lettings_site.tests.test_unitaire
-   :members:
-   :undoc-members:
-   :show-inheritance:

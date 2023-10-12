@@ -10,6 +10,7 @@
 # Path to the Python source files
 import os
 import sys
+import sphinx_rtd_theme
 import django
 
 # Chemin vers le répertoire racine du projet Django
@@ -29,7 +30,11 @@ release = '03/10/2023'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = ['sphinx.ext.todo','sphinx.ext.viewcode','sphinx.ext.autodoc']
+extensions = ['sphinx.ext.todo',
+              'sphinx.ext.viewcode',
+              'sphinx.ext.autodoc',
+              'sphinx_rtd_theme',
+              ]
 
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
@@ -43,5 +48,5 @@ autodoc_member_order = 'bysource'
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = 'alabaster'
-html_static_path = ['_static']
+html_theme = 'sphinx_rtd_theme'
+html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]

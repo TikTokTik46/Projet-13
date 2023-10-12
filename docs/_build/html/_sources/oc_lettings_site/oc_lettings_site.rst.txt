@@ -20,14 +20,6 @@ oc\_lettings\_site.apps module
    :undoc-members:
    :show-inheritance:
 
-oc\_lettings\_site.asgi module
-------------------------------
-
-.. automodule:: oc_lettings_site.asgi
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
 oc\_lettings\_site.settings module
 ----------------------------------
 
@@ -52,18 +44,3 @@ oc\_lettings\_site.views module
    :undoc-members:
    :show-inheritance:
 
-oc\_lettings\_site.wsgi module
-------------------------------
-
-.. automodule:: oc_lettings_site.wsgi
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-Module contents
----------------
-
-.. automodule:: oc_lettings_site
-   :members:
-   :undoc-members:
-   :show-inheritance:

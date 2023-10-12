@@ -10,10 +10,3 @@ Subpackages
    profiles.tests.test_integration
    profiles.tests.test_unitaire
 
-Module contents
----------------
-
-.. automodule:: profiles.tests
-   :members:
-   :undoc-members:
-   :show-inheritance:

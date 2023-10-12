@@ -28,10 +28,3 @@ lettings.tests.test\_unitaire.test\_views module
    :undoc-members:
    :show-inheritance:
 
-Module contents
----------------
-
-.. automodule:: lettings.tests.test_unitaire
-   :members:
-   :undoc-members:
-   :show-inheritance:
