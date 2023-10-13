@@ -15,21 +15,15 @@ jobs:
       - run:
           name: Run tests
           command: python -m pytest
-      - persist_to_workspace:
-          root: ~/project
-          paths:
-            - .
-
-  check_test_coverage:
-    executor: python/default
-    steps:
-      - attach_workspace:
-          at: ~/project
       - run:
           name: Check test coverage
           command: |
             python -m pytest --cov
             coverage report --fail-under=80
+      - persist_to_workspace:
+          root: ~/project
+          paths:
+            - .
 
   build_docker_image:  # Construction de l'image et push vers Docker Hub
     executor: python/default
@@ -51,5 +45,4 @@ workflows:
   test_my_app:
     jobs:
       - build_and_test
-      - check_test_coverage
       - build_docker_image
