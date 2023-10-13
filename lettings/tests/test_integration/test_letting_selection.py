@@ -2,6 +2,7 @@ import pytest
 from django.urls import reverse
 from lettings.models import Address, Letting
 
+
 @pytest.mark.django_db
 def test_select_letting(client):
     """

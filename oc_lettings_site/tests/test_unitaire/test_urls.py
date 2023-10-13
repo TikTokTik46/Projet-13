@@ -16,4 +16,3 @@ def test_index_url():
     assert url == '/'
     resolver = resolve(url)
     assert resolver.func == index
-

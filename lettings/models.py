@@ -38,11 +38,13 @@ class Letting(models.Model):
     Modèle représentant une location.
     """
 
-    title = models.CharField(max_length=256
-                             , help_text="Le titre de la location.")
-    address = models.OneToOneField(Address
-                                   , on_delete=models.CASCADE
-                                   , help_text="L'adresse associée à la location.")
+    title = models.CharField(max_length=256,
+                             help_text="Le titre de la location.")
+    address = models.OneToOneField(Address,
+                                   on_delete=models.CASCADE,
+                                   help_text="L'adresse associée "
+                                             "à la location.",
+                                   )
 
     def __str__(self):
         return self.title

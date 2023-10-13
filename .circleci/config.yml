@@ -20,6 +20,9 @@ jobs:
           command: |
             python -m pytest --cov
             coverage report --fail-under=80
+      - run:
+          name: Check Flake8
+          command: flake8
       - persist_to_workspace:
           root: ~/project
           paths:

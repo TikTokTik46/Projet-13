@@ -3,6 +3,7 @@ from django.urls import reverse
 from django.contrib.auth.models import User
 from profiles.models import Profile
 
+
 @pytest.mark.django_db
 def test_select_profile(client):
     """

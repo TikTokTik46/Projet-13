@@ -5,12 +5,14 @@ import pytest
 from django.contrib.auth.models import User
 from profiles.models import Profile
 
+
 @pytest.mark.django_db
 class TestProfileModel:
     def test_profile_creation(self):
         """
         Teste la création d'un profil utilisateur.
-        Vérifie que le profil est bien de type Profile, qu'il est associé à l'utilisateur correct et que la ville favorite est correcte.
+        Vérifie que le profil est bien de type Profile, qu'il est associé
+        à l'utilisateur correct et que la ville favorite est correcte.
         """
         user = User.objects.create_user(
             username='testuser',

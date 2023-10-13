@@ -9,6 +9,7 @@ from profiles.views import index, profile
 from django.http import HttpResponse
 from django.test import Client
 
+
 @pytest.mark.django_db
 class TestProfileUrls:
     def setup_method(self):
@@ -42,7 +43,3 @@ class TestProfileUrls:
         assert resolver.func == profile
         response: HttpResponse = self.client.get(url)
         assert response.status_code == 200
-
-
-
-

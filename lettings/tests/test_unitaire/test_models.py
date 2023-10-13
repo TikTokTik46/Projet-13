@@ -5,6 +5,7 @@ import pytest
 from django.core.exceptions import ValidationError
 from lettings.models import Address, Letting
 
+
 @pytest.mark.django_db
 class TestAddressModel:
     def test_address_creation(self):

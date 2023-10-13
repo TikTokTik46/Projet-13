@@ -8,6 +8,7 @@ from lettings.models import Address, Letting
 from django.http import HttpResponse
 from django.test import Client
 
+
 @pytest.mark.django_db
 class TestLettingsUrls:
     def setup_method(self):

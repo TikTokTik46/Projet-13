@@ -131,7 +131,8 @@ STATICFILES_DIRS = [BASE_DIR / "static", ]
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
 sentry_sdk.init(
-    dsn="https://f3513015ea721ed10a44e47f12106017@o4505866234429440.ingest.sentry.io/4505866239672320",
+    dsn="https://f3513015ea721ed10a44e47f12106017@o4505866234429440"
+        ".ingest.sentry.io/4505866239672320",
     integrations=[DjangoIntegration()],
     # If you wish to associate users to errors (assuming you are using
     # django.contrib.auth) you may enable sending PII data.
@@ -156,4 +157,3 @@ LOGGING = {
     },
     # Autres configurations de journalisation que vous pourriez avoir
 }
-

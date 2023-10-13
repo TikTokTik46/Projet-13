@@ -8,6 +8,7 @@ from profiles.models import Profile
 from django.test import Client
 from django.http import HttpResponse
 
+
 @pytest.mark.django_db
 class TestProfileViews:
     def setup_method(self):
@@ -16,7 +17,7 @@ class TestProfileViews:
         """
         self.client = Client()
         self.user = User.objects.create_user(username='testuser',
-                                            password='testpassword')
+                                             password='testpassword')
         self.profile = Profile.objects.create(user=self.user, favorite_city='Test City')
 
     def test_index_view(self):

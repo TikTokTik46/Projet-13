@@ -5,6 +5,7 @@ from django.shortcuts import render
 from django.utils.translation import gettext_lazy as _
 from sentry_sdk import capture_message
 
+
 def index(request):
     """
     Affiche la page d'accueil avec des liens vers les sections "Lettings" et "Profiles".
@@ -31,6 +32,7 @@ VIEW_ERRORS = {
                        "de se ressaisir. Revenez plus tard, nous espérons "
                        "qu'il aura retrouvé son sérieux d'ici là."), }}
 
+
 def error_view_handler(request, exception, status):
     """Gère les erreurs HTTP en affichant une page d'erreur personnalisée
     et envoie l'erreur à Sentry.."""
@@ -46,6 +48,7 @@ def error_404_view_handler(request, exception=None):
     """
     capture_message("Page not found: %s" % request.path, level="error")
     return error_view_handler(request, exception, 404)
+
 
 def error_500_view_handler(request, exception=None):
     """

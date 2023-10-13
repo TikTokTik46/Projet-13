@@ -42,4 +42,5 @@ def profile(request, username):
         sentry_sdk.capture_message(message, level="info")
         return render(request, 'profiles/profile.html', context)
     except Profile.DoesNotExist:
-        sentry_sdk.capture_message(f"The profile '{username}' does not exist in the database", level="info")
+        sentry_sdk.capture_message(f"The profile '{username}' does "
+                                   f"not exist in the database", level="info")

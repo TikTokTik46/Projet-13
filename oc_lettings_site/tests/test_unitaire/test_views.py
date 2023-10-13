@@ -4,7 +4,8 @@ Testes des vues de l'application oc_lettings_site
 import pytest
 from django.urls import reverse
 from django.test import Client
-from django.http import HttpResponse, HttpResponseNotFound
+from django.http import HttpResponse
+
 
 @pytest.mark.django_db
 def test_index_view():
@@ -18,6 +19,7 @@ def test_index_view():
     response: HttpResponse = client.get(url)
     assert response.status_code == 200
     assert "Welcome to Holiday Homes" in str(response.content)
+
 
 @pytest.mark.django_db
 def test_error_404_view_handler(client):
