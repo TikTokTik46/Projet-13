@@ -28,9 +28,8 @@ jobs:
       - run:
           name: Check test coverage
           command: |
-            python -m pytest --cov=my_app tests/
-            COVERAGE_THRESHOLD=80
-            coverage report --fail-under=$COVERAGE_THRESHOLD
+            python -m pytest --cov
+            coverage report --fail-under=80
 
   build_docker_image:  # Construction de l'image et push vers Docker Hub
     executor: python/default
