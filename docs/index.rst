@@ -8,8 +8,11 @@ Welcome to OC-Lettings's documentation!
 
 .. toctree::
    :maxdepth: 1
-   :caption: Contents:
+   :caption: Sommaire:
 
+   Le projet
+   description_projet
+   installation_projet
    oc_lettings_site/oc_lettings_site
    lettings/lettings
    profiles/profiles

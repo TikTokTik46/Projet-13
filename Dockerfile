@@ -5,7 +5,7 @@ FROM python:3.12-rc-slim
 # Configurez l'environnement
 ENV PYTHONUNBUFFERED 1
 
-# Récupération de la SECRET_KEY
+# Récupération de la SECRET_KEY (Remplacer par un ENV)
 ARG SECRET_KEY
 
 # Définissez le répertoire de travail

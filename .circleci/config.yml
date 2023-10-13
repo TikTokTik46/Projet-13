@@ -20,13 +20,25 @@ jobs:
           paths:
             - .
 
+  check_test_coverage:
+    executor: python/default
+    steps:
+      - attach_workspace:
+          at: ~/project
+      - run:
+          name: Check test coverage
+          command: |
+            python -m pytest --cov=my_app tests/
+            COVERAGE_THRESHOLD=80
+            coverage report --fail-under=$COVERAGE_THRESHOLD
+
   build_docker_image:  # Construction de l'image et push vers Docker Hub
     executor: python/default
     steps:
       - checkout
-      - setup_remote_docker: # Use remote Docker executor !
+      - setup_remote_docker: # Utilise remote Docker executor !
           version: 20.10.14
-          docker_layer_caching: true # Enable Docker layer caching
+          docker_layer_caching: true
       - run:
           name: Build Docker image
           command: docker build --build-arg SECRET_KEY=$SECRET_KEY -t qmolieres/oc-lettings:latest .
@@ -40,4 +52,5 @@ workflows:
   test_my_app:
     jobs:
       - build_and_test
+      - check_test_coverage
       - build_docker_image
