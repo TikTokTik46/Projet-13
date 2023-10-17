@@ -1,0 +1,6 @@
+I. Installation du projet
+----------------------
+
+Pour installer le projet, vous devez tout d’abord posséder un compte GitHub (https://github.com/).
+
+Il vous faudra ensuite effectuez un fork du projet pour obtenir une copie de celui-ci (https://github.com/TikTokTik46/Projet-13). Une fois le projet forké, procédez au clonage du projet sur votre ordinateur local.
