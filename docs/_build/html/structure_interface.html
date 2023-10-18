@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="FR" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>V. Structure des interfaces de programmation &mdash; Documentation OC-Lettings 03/10/2023</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=cf57853c"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="_static/translations.js?v=d99ca74e"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+    <link rel="next" title="VI. Guide d’utilisation en Local et Création de l’Image Docker" href="guide_utilisation.html" />
+    <link rel="prev" title="IV. Structure de la base de données et des modèles" href="structure_bdd.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            OC-Lettings
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Sommaire:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation_projet.html">I. Installation du projet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demarrage_rapide.html">II. Démarrage rapide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="technologies.html">III. Technologies et langages de programmation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structure_bdd.html">IV. Structure de la base de données et des modèles</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">V. Structure des interfaces de programmation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#github">GitHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#circleci">CircleCI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#docker">Docker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sentry">Sentry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#render">Render</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="guide_utilisation.html">VI. Guide d’utilisation en Local et Création de l’Image Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploiment.html">VII. Déploiement et gestion de l’application</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">OC-Lettings</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">V. Structure des interfaces de programmation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/structure_interface.rst.txt" rel="nofollow"> Afficher la source de la page</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="v-structure-des-interfaces-de-programmation">
+<h1>V. Structure des interfaces de programmation<a class="headerlink" href="#v-structure-des-interfaces-de-programmation" title="Lien permanent vers cette rubrique"></a></h1>
+<p>Ce projet Django repose sur un ensemble d’interfaces de programmation (API) soigneusement conçues, qui constituent le pilier de notre stack technologique. Elles jouent un rôle central dans la gestion, la collaboration et le déploiement harmonieux de notre application, assurant un flux de travail fluide et efficace de bout en bout.</p>
+<section id="github">
+<h2>GitHub<a class="headerlink" href="#github" title="Lien permanent vers cette rubrique"></a></h2>
+<p>GitHub est une plateforme en ligne qui permet aux développeurs de stocker, gérer et collaborer sur leurs projets de développement de logiciels. Elle offre des outils de gestion de code source, de suivi des problèmes, de documentation et de collaboration, rendant le travail en équipe plus efficace. Les développeurs peuvent héberger leurs projets, partager des ressources et contribuer à d’autres projets open source.</p>
+<p>C’est à partir de la création de demande de fusion du code modifié via GitHub que notre processus de d’intégration continue est lancé.</p>
+</section>
+<section id="circleci">
+<h2>CircleCI<a class="headerlink" href="#circleci" title="Lien permanent vers cette rubrique"></a></h2>
+<p>CircleCI est une plateforme d’intégration continue qui automatise le processus de construction, de test et de déploiement des logiciels. Elle permet aux équipes de développement de détecter rapidement les erreurs, d’assurer la qualité du code et de livrer des applications fiables. CircleCI prend en charge de nombreux langages de programmation, environnements et intégrations tierces pour une personnalisation maximale du pipeline d’intégration continue.</p>
+<p>Le fichier <code class="docutils literal notranslate"><span class="pre">config.yml</span></code> permet de configurer les étapes du workflow de notre processus d’intégration continue, celui-ci est déclenché à chaque push ou pull request sur la branche master.</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Fichier de configuration CircleCI (config.yml)</span><a class="headerlink" href="#id1" title="Lien permanent vers ce code"></a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2.1</span>
+<span class="linenos"> 2</span><span class="nt">orbs</span><span class="p">:</span>
+<span class="linenos"> 3</span><span class="w">  </span><span class="nt">python</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">circleci/python@2.0.3</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="nt">jobs</span><span class="p">:</span>
+<span class="linenos"> 6</span><span class="w">  </span><span class="nt">build_and_test</span><span class="p">:</span><span class="w"> </span><span class="c1"># Construction et execution des tests pour validation</span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="nt">executor</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python/default</span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<span class="linenos"> 9</span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">checkout</span>
+<span class="linenos">10</span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">python/install-packages</span><span class="p">:</span>
+<span class="linenos">11</span><span class="w">          </span><span class="nt">pkg-manager</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pip</span>
+<span class="linenos">12</span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span>
+<span class="linenos">13</span><span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Set environment variables</span>
+<span class="linenos">14</span><span class="w">          </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;SECRET_KEY=$SECRET_KEY&quot; &gt;&gt; $BASH_ENV</span>
+<span class="linenos">15</span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span>
+<span class="linenos">16</span><span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Run tests</span>
+<span class="linenos">17</span><span class="w">          </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python -m pytest</span>
+<span class="linenos">18</span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span>
+<span class="linenos">19</span><span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Check test coverage</span>
+<span class="linenos">20</span><span class="w">          </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="linenos">21</span><span class="w">            </span><span class="no">python -m pytest --cov</span>
+<span class="linenos">22</span><span class="w">            </span><span class="no">coverage report --fail-under=80</span>
+<span class="linenos">23</span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span>
+<span class="linenos">24</span><span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Check Flake8</span>
+<span class="linenos">25</span><span class="w">          </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flake8</span>
+<span class="linenos">26</span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">persist_to_workspace</span><span class="p">:</span>
+<span class="linenos">27</span><span class="w">          </span><span class="nt">root</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">~/project</span>
+<span class="linenos">28</span><span class="w">          </span><span class="nt">paths</span><span class="p">:</span>
+<span class="linenos">29</span><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.</span>
+<span class="linenos">30</span>
+<span class="linenos">31</span><span class="w">  </span><span class="nt">build_docker_image</span><span class="p">:</span><span class="w">  </span><span class="c1"># Construction de l&#39;image et push vers Docker Hub</span>
+<span class="linenos">32</span><span class="w">    </span><span class="nt">executor</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python/default</span>
+<span class="linenos">33</span><span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<span class="linenos">34</span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">checkout</span>
+<span class="linenos">35</span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">setup_remote_docker</span><span class="p">:</span><span class="w"> </span><span class="c1"># Utilise remote Docker executor !</span>
+<span class="linenos">36</span><span class="w">          </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20.10.14</span>
+<span class="linenos">37</span><span class="w">          </span><span class="nt">docker_layer_caching</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="linenos">38</span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span>
+<span class="linenos">39</span><span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Build Docker image</span>
+<span class="linenos">40</span><span class="w">          </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">docker build --build-arg SECRET_KEY=$SECRET_KEY -t qmolieres/oc-lettings:latest .</span>
+<span class="linenos">41</span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span>
+<span class="linenos">42</span><span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Push Docker image to Docker Hub</span>
+<span class="linenos">43</span><span class="w">          </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="linenos">44</span><span class="w">            </span><span class="no">echo &quot;$DOCKER_PASSWORD&quot; | docker login -u &quot;$DOCKER_USERNAME&quot; --password-stdin</span>
+<span class="linenos">45</span><span class="w">            </span><span class="no">docker push qmolieres/oc-lettings:latest </span>
+<span class="linenos">46</span>
+<span class="linenos">47</span><span class="nt">workflows</span><span class="p">:</span>
+<span class="linenos">48</span><span class="w">  </span><span class="nt">test_my_app</span><span class="p">:</span>
+<span class="linenos">49</span><span class="w">    </span><span class="nt">jobs</span><span class="p">:</span>
+<span class="linenos">50</span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">build_and_test</span>
+<span class="linenos">51</span><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">build_docker_image</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="docker">
+<h2>Docker<a class="headerlink" href="#docker" title="Lien permanent vers cette rubrique"></a></h2>
+<p>Docker est une plateforme de conteneurisation qui révolutionne la manière dont les applications sont développées, déployées et gérées. Elle permet d’emballer des applications et leurs dépendances dans des conteneurs légers et portables, assurant une uniformité et une reproductibilité de l’environnement d’exécution. Docker simplifie le développement, l’intégration et le déploiement d’applications, offrant une plus grande flexibilité pour les équipes de développement.</p>
+<p>Le fichier <code class="docutils literal notranslate"><span class="pre">Dockerfile</span></code> permet de préciser les étapes permettant la création de notre image.</p>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">Fichier de configuration de la création de l’image (Dockerfile)</span><a class="headerlink" href="#id2" title="Lien permanent vers ce code"></a></div>
+<div class="highlight-Dockerfile notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c"># syntax = docker/dockerfile:1.2</span>
+<span class="linenos"> 2</span><span class="c"># Utilisez une image de base avec Python</span>
+<span class="linenos"> 3</span><span class="k">FROM</span><span class="w"> </span><span class="s">python:3.12-rc-slim</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="c"># Configurez l&#39;environnement</span>
+<span class="linenos"> 6</span><span class="k">ENV</span><span class="w"> </span>PYTHONUNBUFFERED<span class="w"> </span><span class="m">1</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="c"># Récupération de la SECRET_KEY (Remplacer par un ENV)</span>
+<span class="linenos"> 9</span><span class="k">ARG</span><span class="w"> </span>SECRET_KEY
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="c"># Définissez le répertoire de travail</span>
+<span class="linenos">12</span><span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="c"># Copiez les fichiers de dépendances (requirements.txt) dans le conteneur</span>
+<span class="linenos">15</span><span class="k">COPY</span><span class="w"> </span>requirements.txt<span class="w"> </span>/app/
+<span class="linenos">16</span>
+<span class="linenos">17</span><span class="c"># Installez les dépendances</span>
+<span class="linenos">18</span><span class="k">RUN</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+<span class="linenos">19</span>
+<span class="linenos">20</span><span class="c"># Copiez le reste de l&#39;application dans le conteneur</span>
+<span class="linenos">21</span><span class="k">COPY</span><span class="w"> </span>.<span class="w"> </span>/app/
+<span class="linenos">22</span>
+<span class="linenos">23</span><span class="c"># Exécutez la commande collectstatic pour collecter les fichiers statiques</span>
+<span class="linenos">24</span><span class="k">RUN</span><span class="w"> </span>python<span class="w"> </span>manage.py<span class="w"> </span>collectstatic<span class="w"> </span>--noinput
+<span class="linenos">25</span>
+<span class="linenos">26</span><span class="c"># Exposez le port sur lequel votre application fonctionne (par défaut : 8000)</span>
+<span class="linenos">27</span><span class="k">EXPOSE</span><span class="w"> </span><span class="s">8000</span>
+<span class="linenos">28</span>
+<span class="linenos">29</span><span class="c"># Commande pour exécuter votre application</span>
+<span class="linenos">30</span><span class="k">CMD</span><span class="w"> </span>gunicorn<span class="w"> </span>oc_lettings_site.wsgi:application<span class="w"> </span>--bind<span class="w"> </span><span class="m">0</span>.0.0.0:8000
+</pre></div>
+</div>
+</div>
+<p>Ce fichier utilise une image Python de base, configure l’environnement, récupère la clé secrète en tant qu’argument, définit le répertoire de travail, copie les dépendances et le code source, installe les dépendances, collecte les fichiers statiques, expose le port 8000, et exécute l’application avec Gunicorn.</p>
+<p>Afin de pouvoir déployer notre application en ligne, nous faisons un pull de cette image sur le cloud DockerHub. Cette image est ensuite transmise à Render pour son déploiement.</p>
+</section>
+<section id="sentry">
+<h2>Sentry<a class="headerlink" href="#sentry" title="Lien permanent vers cette rubrique"></a></h2>
+<p>Sentry est un service de gestion d’erreurs qui permet de suivre, de signaler et de résoudre les bogues et les problèmes dans les applications en temps réel. En fournissant une meilleure visibilité sur la qualité du logiciel, Sentry aide les développeurs à identifier, comprendre et corriger rapidement les erreurs, améliorant ainsi l’expérience utilisateur.</p>
+<img alt="Page d'acceuil Sentry" src="_images/Sentry.png" />
+<p>L’intégration et la configuration de Sentry dans l’application Django à été réalisé dans le fichier <code class="docutils literal notranslate"><span class="pre">settings.py</span></code>.</p>
+</section>
+<section id="render">
+<h2>Render<a class="headerlink" href="#render" title="Lien permanent vers cette rubrique"></a></h2>
+<p>Render est une plateforme de cloud computing qui simplifie le déploiement d’applications. Elle offre un environnement évolutif et hautement performant pour les développeurs, sans la nécessité de gérer les détails complexes de l’infrastructure. Render prend en charge une variété de langages de programmation, de bases de données et de services, permettant aux développeurs de se concentrer sur le développement de leurs applications plutôt que sur l’administration des serveurs. Cette plateforme propose un déploiement simple et des mises à jour continues, offrant ainsi une expérience fluide pour les développeurs et les utilisateurs finaux.</p>
+<p>Comme précisé précédemment, un lien a été créé entre notre Docker Hub et Render afin que le déploiement soit réalisé automatiquement à chaque mise à jour de l’image.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="structure_bdd.html" class="btn btn-neutral float-left" title="IV. Structure de la base de données et des modèles" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="guide_utilisation.html" class="btn btn-neutral float-right" title="VI. Guide d’utilisation en Local et Création de l’Image Docker" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Droits d'auteur 2023, Quentin Molières.</p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

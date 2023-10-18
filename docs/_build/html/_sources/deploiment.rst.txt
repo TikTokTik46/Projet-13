@@ -8,7 +8,6 @@ Configuration de CircleCI
 1. Connectez-vous à votre compte CircleCI :
    - Connectez-vous à votre compte CircleCI avec vos identifiants.
 
-
 2. Autorisez l'accès à GitHub et configurez votre projet :
    - Une fois connecté à CircleCI, cliquez sur le menu en haut à droite et sélectionnez "User Settings" (Paramètres de l'utilisateur).
    - Dans le menu de gauche, cliquez sur "Organization."
@@ -16,12 +15,8 @@ Configuration de CircleCI
    - Cliquez sur "Authorize with GitHub" (Autoriser avec GitHub) et suivez les étapes pour autoriser l'accès de CircleCI à votre compte GitHub.
    - Après avoir autorisé l'accès, vous pouvez maintenant configurer un projet pour une intégration continue avec CircleCI. Dans la page d'accueil de votre compte CircleCI, cliquez sur "Add Projects" (Ajouter des projets).
 
-
 3. Ajoutez vos variables d'environnement
    - Il est ensuite nécessaire d'ajouter les variables d'environnement pour le bon fonctionnement de CircleCI. Pour ce faire, ajoutez les variables SECRET_KEY (Clé secrète du projet Django), DOCKER_USERNAME (Nom de votre compte DockerHub) et DOCKER_PASSWORD (Mot de passe de votre compte DockerHub).
-
-.. image:: _static/circleci_env.png
-   :alt: Paramétrage environnement CircleCI
 
 Configuration de DockerHub
 ~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -6,6 +6,9 @@
 Bienvenue sur la documentation de OC-Lettings's !
 =================================================
 
+.. image:: _static/Orange_County_Lettings.png
+   :alt: Logo Orange OC Lettings
+
 Orange County Lettings est une start-up spécialisée dans la location de biens immobiliers. Notre plateforme, OC-Lettings, propose une interface conviviale pour mettre en valeur nos biens immobiliers. Cette plateforme créé à partir de Django permet de consulter facilement les informations sur nos différents profils et locations tout en permettant leurs mise à jour via notre panneau d'administration intuitif.
 
 Vous trouverez ici la documentation permettant l'installation et la mise en production du site OC-Letting's. Bonne lecture 😃 !
