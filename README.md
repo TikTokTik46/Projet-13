@@ -76,26 +76,26 @@ Utilisation de PowerShell, comme ci-dessus sauf :
 - Pour activer l'environnement virtuel, `.\venv\Scripts\Activate.ps1` 
 - Remplacer `which <my-command>` par `(Get-Command <my-command>).Path`
 
-### Deploiement
+## Deploiement
 
-#### Fonctionnement du déploiement
+### Fonctionnement du déploiement
 
 Le déploiement de notre application s'appuie sur une chaîne automatisée. GitHub sert de référentiel pour notre code source. CircleCI surveille les mises à jour sur GitHub et construit l'application, garantissant que le code fonctionne correctement. Docker Hub stocke l'image Docker de l'application, qui est prête à être déployée. Enfin, Render permet un déploiement continu, automatiquement déclenché par les mises à jour de Docker Hub, garantissant que les dernières versions de notre application sont toujours disponibles pour nos utilisateurs. Cette approche assure un déploiement fluide et efficace.
 
-#### Configuration requise pour le déploiement
+### Configuration requise pour le déploiement
 
 - GitHub : Un compte GitHub pour héberger votre code source.
 - CircleCI : Un compte CircleCI pour configurer le processus d'intégration continue.
 - Docker Hub : Un compte Docker Hub pour stocker vos images Docker.
 - Render : Un compte Render pour déployer votre application.
 
-#### Etapes du déploiement
+### Etapes du déploiement
 
 - Configuration CircleCI : Liez votre compte à votre compte GitHub et ajoutez votre projet. Ajoutez les variables d'environnement (SECRET_KEY, DOCKER_USERNAME, DOCKER_PASSWORD).
 - Configuration DockerHub : Modifiez le lien vers votre image DockerHub dans le job "build_docker_image" du fichier de configuration CircleCI (config.yml).
 - Configuration Render : Créez un service web en précisant l'adresse de votre image DockerHub. Définissez la variable d'environnement "SECRET_KEY" dans les paramètres. Récupérez l'adresse du Hook et renseignez-la sur votre projet DockerHub.
 
-### Documentation
+## Documentation
 
 Pour accéder à une documentation plus détaillée vous pouvez vous rendre à l'adresse suivante.
 https://projet-13.readthedocs.io/fr/latest/index.html
